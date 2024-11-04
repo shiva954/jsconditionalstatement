@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+
+<body>
+    <h3>
+        3. Electricity Bill Calculation Based on Usage
+
+        Problem:
+
+        Write a program to calculate the electricity bill based on the number of units consumed:
+
+        Units <= 100: $1 per unit Units> 100 and <= 300: $1 per unit for the first 100 units + $1.5 per unit for the
+                next 200 units Units> 300: $1 per unit for the first 100 units + $1.5 per unit for the next 200 units +
+                $2 per unit beyond 300
+
+
+                Requirements:
+
+                Input: A variable representing the number of units consumed
+
+                Output: Total electricity bill amount
+
+
+    </h3>
+
+    <h3>open console for output</h3>
+    <script>
+        let units = Number(prompt("enter the number of units used:"));
+
+        if (units <= 100) {
+            console.log(`the electricity bill for the used units is: ${1 * units}`);
+        }
+        else if (units > 100 && units <= 300) {
+            console.log(`the electricity bill for the used units is: ${100 + (1.5 * (units - 100))}`);
+        }
+        else if (units > 300) {
+            console.log(`the electricity bill for the used units is: ${100 + 300 + (2 * (units - 300))}`);
+        }
+        else {
+            console.log(`invalid input`);
+        }
+    </script>
+</body>
+
+</html>
